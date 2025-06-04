@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './Home.css'
 import AOS from 'aos';
+import ChatPopup from './chatbot';
 
 const Home = () => {
   useEffect(() => {
@@ -158,7 +159,11 @@ const Home = () => {
       <section className="newsletter py-5 text-center bg-warning text-dark">
         <h2 className="mb-3">📬 Subscribe to our Newsletter</h2>
         <p className="mb-4">Stay updated on new destinations, offers, and discounts!</p>
-        <form className="newsletter-form d-flex justify-content-center flex-wrap gap-2">
+        <form className="newsletter-form d-flex justify-content-center flex-wrap gap-2" onSubmit={(e) => {
+            e.preventDefault();
+            alert("Thanks for Subscribing! 🎉")
+          }}>
+          
           <input
             type="email"
             className="form-control"
@@ -169,8 +174,26 @@ const Home = () => {
           <button type="submit" className="btn btn-dark px-4">Subscribe</button>
         </form>
       </section>
+      <footer className="footer bg-dark text-white text-center py-4">
+  <h5>Follow Us</h5>
+  <div className="social-icons d-flex justify-content-center gap-3 mt-2">
+    <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
+      <i className="fab fa-instagram fa-2x text-white"></i>
+    </a>
+    <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer">
+      <i className="fab fa-facebook fa-2x text-white"></i>
+    </a>
+    <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+      <i className="fab fa-linkedin fa-2x text-white"></i>
+    </a>
+    <a href="mailto:youremail@example.com">
+      <i className="fas fa-envelope fa-2x text-white"></i>
+    </a>
+  </div>
+  <p className="mt-3 mb-0">© 2025 Royal India Trails. All rights reserved.</p>
+</footer>
 
-
+<ChatPopup/>
 
     </>
   );

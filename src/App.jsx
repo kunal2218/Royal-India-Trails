@@ -8,6 +8,7 @@ import Contact from './components/Pages/Contact'
 import TripPlanner from './components/Pages/TripPlanner'
 import { BookNow } from './components/Pages/BookNow'
 import Login from './components/Pages/Login'
+import Signup from './components/Pages/signup'
 
 
 export const App = () => {
@@ -22,6 +23,7 @@ export const App = () => {
         { path: "/contact", element: <Contact /> },
         { path: "/destinations", element: <TripPlanner/> },
         {path: "/login", element: <Login /> },
+        {path: "/signup", element: <Signup />},
       ]
     }
 

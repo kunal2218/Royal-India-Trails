@@ -136,6 +136,7 @@ const TripPlanner = () => {
                         ))}
                     </select>
                 </div>
+                
                 <div className="form-group">
                     <label>To</label>
                     <select value={toCity} onChange={(e) => setToCity(e.target.value)}>
@@ -150,6 +151,28 @@ const TripPlanner = () => {
             </form>
 
             {loading && <p className="loading">Fetching route...</p>}
+            <div className="travel-services">
+  <h3>Book Your Travel Services</h3>
+  <div className="services-icons">
+    <a href="https://www.makemytrip.com/flights/" target="_blank" rel="noreferrer">
+      <img src="https://img.icons8.com/ios-filled/100/airplane-take-off.png" alt="Flights" />
+      <p>Flights</p>
+    </a>
+    <a href="https://www.irctc.co.in/nget/train-search" target="_blank" rel="noreferrer">
+      <img src="https://img.icons8.com/ios-filled/100/train.png" alt="Trains" />
+      <p>Trains</p>
+    </a>
+    <a href="https://www.booking.com/" target="_blank" rel="noreferrer">
+      <img src="https://img.icons8.com/ios-filled/100/hotel.png" alt="Hotels" />
+      <p>Hotels</p>
+    </a>
+    <a href="https://www.uber.com/in/en/" target="_blank" rel="noreferrer">
+      <img src="https://img.icons8.com/ios-filled/100/taxi.png" alt="Cabs" />
+      <p>Cabs</p>
+    </a>
+  </div>
+</div>
+            
 
             {routeSummary && (
                 <div className="route-summary">
@@ -158,9 +181,13 @@ const TripPlanner = () => {
                     <p><strong>To:</strong> {routeSummary.end}</p>
                     <p><strong>Total Distance:</strong> {routeSummary.distance} km</p>
                     <p><strong>Estimated Duration:</strong> {routeSummary.duration} minutes</p>
+                    
                 </div>
+                
+                
             )}
         </div>
+        
     );
 };
 

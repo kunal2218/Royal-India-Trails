@@ -69,3 +69,46 @@ select {
 .route-summary strong {
     font-weight: bold;
 }
+.travel-services {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.travel-services h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.services-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.services-icons a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  text-align: center;
+  padding: 1rem;
+  width: 120px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 10px;
+}
+
+.services-icons a:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+.services-icons img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
